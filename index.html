@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/chatbot.css">
+</head>
+<body>
+    
+</body>
+<script src="./js/Chatbot.js"></script>
+<script>
+    chatbot('ADColleges', {
+        en: {
+            greeting: {
+                elements: {
+                    intro: {
+                        elements: itemsElements.text('Hello there! We are a company that is specialized in tech and precisely in cyber security')
+                    },
+                    contact: {
+                        elements: itemsElements.button('contact'),
+                        target: 'contact'
+                    },
+                    services: {
+                        elements: itemsElements.button('our services'),
+                        target: 'our_services'
+                    },
+                }, 
+                tag: 'greeting hi hello good morning good evening hey'
+            },
+            who_are_we: {
+                elements: [
+                    itemsElements.text('A tech company specialized in cyber security'),
+                    itemsElements.button('contact us')
+                ],
+                target: 'contact',
+                tag: 'who'
+            },
+            contact: {
+                elements: {
+                    email: {
+                        elements: itemsElements.link('contacts@intervalle-technologies.com', 'mailto:contacts@intervalle-technologies.com')
+                    },
+                    phone: {
+                        elements: itemsElements.link('+123999999999', 'telephone:+123999999999')
+                    },
+                    who: {
+                        elements: itemsElements.button('Who are we'),
+                        target: 'who_are_we'
+                    },
+                },
+                tag: 'email phone address contact'
+            },
+            our_services: {
+                elements: {
+                    cyber_security: {
+                        elements: itemsElements.button('cyber security'),
+                        target: 'cyber_security'
+                    },
+                    banking_solutions: {
+                        elements: itemsElements.button('banking solutions'),
+                        target: 'banking_solutions'
+                    }
+                },
+                tag: 'services offer'
+            },
+            cyber_security: {
+                elements: {
+                    intro: {elements: itemsElements.text('our services list')},
+                },
+                tag: 'cyber security'
+            },
+            banking_solutions: {
+                elements: {
+                    intro: {elements: itemsElements.text('our banking solutions')},
+                },
+                tag: 'solution banking'
+            },
+        },
+        fr: {
+            greeting: {
+                elements: {
+                    intro: {
+                        elements: itemsElements.text('Salut! Nous sommes une entreprise spécialisée dans le domaine IT et plus précisément en cyber sécurité')
+                    },
+                    contact: {
+                        elements: itemsElements.button('contactez-nous'),
+                        target: 'contact'
+                    },
+                    services: {
+                        elements: itemsElements.button('Nos services'),
+                        target: 'our_services'
+                    },
+                }, 
+                tag: 'greeting'
+            },
+            who_are_we: {
+                elements: [
+                    itemsElements.text('Une entreprise IT spécialisée en cyber sécurité'),
+                    itemsElements.button('contactez-nous')
+                ],
+                target: 'contact'
+            },
+            contact: {
+                elements: {
+                    email: {
+                        elements: itemsElements.link('contacts@intervalle-technologies.com', 'mailto:contacts@intervalle-technologies.com')
+                    },
+                    phone: {
+                        elements: itemsElements.link('+123999999999', 'telephone:+123999999999')
+                    },
+                    who: {
+                        elements: itemsElements.button('Qui est INTERVALLE TECHNOLOGIES'),
+                        target: 'who_are_we'
+                    },
+                }
+            },
+            our_services: {
+                elements: {
+                    cyber_security: {
+                        elements: itemsElements.button('cyber sécurité'),
+                        target: 'cyber_security'
+                    },
+                    banking_solutions: {
+                        elements: itemsElements.button('Solutions pour les banques'),
+                        target: 'banking_solutions'
+                    }
+                }
+            },
+            cyber_security: {
+                elements: {
+                    intro: {elements: itemsElements.text('Liste de nos services')},
+                }
+            },
+            banking_solutions: {
+                elements: {
+                    intro: {elements: itemsElements.text('Liste de nos solutions pour les banques')},
+                }
+            }
+        }
+    })
+</script>
+</html>
